@@ -1,0 +1,239 @@
+html, body
+{
+	box-sizing: border-box;
+	width: 100%;
+	font-family: helvetica, sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	text-align: center;
+	text-rendering: optimizeLegibility;
+	background-color: #eaeaea;
+	color: #FFF;
+}
+
+body
+{
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+*, *:before, *:after
+{
+	box-sizing: inherit;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+	color: #ffffff;
+}
+
+.header a:hover {
+	color: #FFFF99;
+}
+
+li {
+	list-style: none;
+}
+
+.container, #news {
+	padding: .5em;
+	width: 100%;
+}
+
+#news { background-color: #ffffff; max-width: 1200px; }
+
+.header { 
+	background-color: #1E4258;
+	position: fixed;
+	left:0;
+	top:0;
+	z-index: 999;
+	height: auto
+}
+
+.footer { background-color:  #1E4258;}
+
+.footer h2 {
+	padding: .25rem;
+	font-size: 1rem;
+}
+
+.nav-container {
+	display: flex;
+	flex-flow: column;
+	max-width: 1200px;
+	margin: auto;
+}
+
+.menu li {
+	padding: .05rem 0;
+	font-weight: bold;
+}
+
+.logo {
+	margin: auto;
+	height: auto;
+	width: 100%;
+	text-indent: -9999px;
+	background-image: url(../img/logo.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+}
+
+.logo > a {
+	display: block;
+	padding: 0.125rem;
+	line-height: 3rem;
+}
+
+p.bubble { color: #1E4258; }
+
+.nav-main {
+	display: block;
+	margin: auto;
+	height: 3rem;
+}
+
+.nav-main li {
+	display: inline;
+	padding: 0.125rem;
+	line-height: 3rem;
+}
+
+h2 {
+	padding-top: 1rem; 
+}
+
+p {
+	padding: 1rem;
+}
+
+.cover {
+	padding: 7.2rem 0 3rem;
+	background-repeat: no-repeat;;
+	background-position: center;
+	background-image: url(img/education-header.jpg);
+	opacity: .80;
+	background-size: cover;
+}
+
+.cover img {
+	display: block;;
+	margin: 1rem auto;
+}
+
+.cover p {
+	font-size: 1.25rem;
+	font-weight: 500;
+}
+
+.main {
+	display: block;
+}
+
+.countries li {
+	margin: .5rem;
+	padding: .5rem;
+	/*background-color: red;*/
+}
+
+.countries li a {
+	display: block;
+}
+
+.countries img { width: 90%; opacity: .7; }
+
+.countries img:hover { opacity: 1; }
+.countries h3 { color: #1E4258 }
+
+.item {
+    height: auto;
+    padding: 1rem;
+    font-size: 2rem;
+    /* background-color: gray; */
+}
+
+.periodico img {
+	width: 100%;
+}
+
+/*
+Aquí inicia las media queries
+*/
+
+@media screen and (min-width: 20em){
+	.sm-flex-wrap {
+		flex-wrap: wrap;
+	}
+
+	.sm-flex {
+		display: flex;
+	}
+	.sm {width: 50%}
+ }
+
+@media screen and (min-width: 30em){ 
+	.nav-container {
+		flex-flow:row;
+	}
+
+	.logo {
+		flex: 30%; 
+		margin: 0;
+		background-position: left;
+	}
+
+	.nav-main {
+		flex: 70%;
+		text-align: right;
+	}
+
+	.container > * {
+		max-width: 1200px;
+		margin: auto;
+	}
+
+	.fixed-head, .cover {
+		padding-top: 5rem;
+	}
+
+	h2 {
+		padding-top: 2rem;
+	}
+
+	.sm-flex-wrap {
+		flex-wrap: wrap;
+	}
+
+	.sm-flex {
+		display: flex;
+	}
+
+	.md { width: 25%; }
+}
+
+@media screen and (min-width: 48em) {
+	.countries {
+		display: flex;
+		/*flex-flow: row wrap;*/
+		justify-content: space-between;
+		align-content: center;
+	}
+
+	.countries img { max-width: 550px; opacity: .7; }
+	.periodico { max-width: 100%; }
+	
+}
+
+@media screen and (min-width: 64em) {
+	.lg{ width: 16.6666666%}
+}
+
+
+
+
+
+
